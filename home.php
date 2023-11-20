@@ -57,24 +57,6 @@
             <input type="submit" value="Cari">
             </form>
 
-<?php
-include("koneksi.php");
-
-if (isset($_GET['nim'])) {
-    $nim = $_GET['nim'];
-
-    $sql = "SELECT * FROM mahasiswa WHERE nim = '$nim'";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-?>
-<?php
-    } else {
-        echo "Data tidak ditemukan.";
-    }
-}
-?>
 
 <?php
 include("koneksi.php");
